@@ -38,6 +38,6 @@ st.code(code, language='python')
 st.caption("code used to make barchart")
 #pip3 install pipenv
 #pip3 install env
-#sudo -H pip install -U pipenv
+#sudo -H pip install -U pipenv in shh do pip install pipenv
 #pipenv shell
 #pip3 install streamlit
