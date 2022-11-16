@@ -1,8 +1,8 @@
 import pandas as pd
 import streamlit as st
 
-screen_df = pd.read_csv('https://raw.githubusercontent.com/win-n-nie/dashboard-streamlit/main/ScreenTime.csv')
-phone_df = pd.read_csv('')
+screen_df = pd.read_csv('/Users/wendyarias/Documents/GitHub/dashboard-streamlit/ScreenTime.csv')
+phone_df = pd.read_csv('/Users/wendyarias/Documents/GitHub/dashboard-streamlit/telephony2.csv')
 ### this is a header
 st.header("Group Project Data")
 st.caption("visual representation of data")
@@ -28,6 +28,16 @@ st.caption(" a representation of the types of calls made daily")
 
 
 ### code block
-code = '''def assignment():
-    print("This was done as a class assigment utilizing Streamlit")'''
+code = '''
+st.subheader("Screen Time Data")
+screen_bat_tot = screen_df['battery_level'].value_counts()
+st.bar_chart(screen_bat_tot)
+st.caption("A representation of phones battery level ") 
+'''
 st.code(code, language='python')
+st.caption("code used to make barchart")
+#pip3 install pipenv
+#pip3 install env
+#sudo -H pip install -U pipenv
+#pipenv shell
+#pip3 install streamlit
